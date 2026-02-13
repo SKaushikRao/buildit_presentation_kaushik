@@ -74,7 +74,7 @@ export function HeroSection() {
         {/* Wraps the flip-board title and mute button so they can share audio state. */}
         <SplitFlapAudioProvider>
           <div className="relative">
-            <SplitFlapText text="BUILDIT" speed={80} />
+            <SplitFlapText text="BobTheBuilder" speed={70} />
             <div className="mt-4">
               <SplitFlapMuteToggle />
             </div>
@@ -83,12 +83,12 @@ export function HeroSection() {
 
         {/* Tagline — change this to match your project. */}
         <h2 className="font-[var(--font-bebas)] text-muted-foreground/60 text-[clamp(1rem,3vw,2rem)] mt-4 tracking-wide">
-          BUILD SKILLS. BUILD PROJECTS. BUILD PROOF.
+          Touchless 3D Education Platform transforms learning through gesture-controlled virtual simulations.
         </h2>
 
         {/* Short description. Replace with your own pitch. */}
         <p className="mt-12 max-w-lg font-mono text-sm text-muted-foreground leading-relaxed text-justify">
-          This is the template where you need to tinker around, change texts as per your project. Problems, solution, project review video, MVP (at least 4), revenue model if any, credits, then add a feedback form. Fix errors for extra points.
+          Students can explore the solar system, interact with a 3D human heart, and perform chemistry experiments — all without physical labs. Designed for accessibility, especially in rural areas, it delivers immersive, safe, and affordable STEM education directly through a browser.
         </p>
 
         {/* Buttons: #signals scrolls to the Problems section on the same page; /lean-canvas is another route. */}

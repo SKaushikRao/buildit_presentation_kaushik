@@ -15,20 +15,24 @@ gsap.registerPlugin(ScrollTrigger)
 /** Your revenue ideas. Each item becomes one card in the horizontal scroll. */
 const revenueModels = [
   {
-    title: "Project-Based Commission",
-    description: "The platform earns a commission from the project enrollment fee paid by learners.",
+    title: "Institutional Subscription Model (B2B)",
+    description: "Schools, colleges, and coaching institutes pay a monthly or annual subscription to access the full suite of virtual labs and simulations, especially targeting rural and underfunded institutions that lack physical infrastructure.",
   },
   {
-    title: "Pro Subscription (AI-Powered Features)",
-    description: "Users can upgrade to a premium plan to access AI-assisted learning tools, code insights, and progress analytics.",
+    title: "Freemium Model (B2C)",
+    description: "Basic modules (e.g., Solar System) are free, while advanced medical simulations, complex chemistry experiments, and assessment features are available under a premium subscription.",
   },
   {
-    title: "Paid Mentorship Support",
-    description: "Learners can opt for additional one-on-one or on-demand mentor assistance for specific technical challenges.",
+    title: "Government & NGO Partnerships",
+    description: "Collaborate with government education departments and NGOs working in rural areas to deploy the platform at scale under funded educational initiatives.",
   },
   {
-    title: "Micro-Revenue Streams",
-    description: "Small-value earnings generated through add-ons such as certifications, advanced project access, and premium learning tools.",
+    title: "Licensing to EdTech Platforms",
+    description: "License the simulation engine to existing online learning platforms who want to integrate immersive 3D labs into their curriculum.",
+  },
+  {
+    title: "Custom Simulation Development",
+    description: "Offer paid custom modules for medical colleges, training institutes, or corporate STEM programs needing specialized simulations.",
   },
 ]
 

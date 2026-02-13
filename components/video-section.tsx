@@ -61,7 +61,7 @@ export function VideoSection() {
       <div ref={headerRef} className="mb-12 pr-6 md:pr-12">
         <span className="font-mono text-[10px] uppercase tracking-[0.3em] text-accent">02.5 / Video</span>
         <h2 className="mt-4 font-[var(--font-bebas)] text-5xl md:text-7xl tracking-tight">
-          PROJECT REVIEW <span className="text-accent">VIDEO</span>
+          PROJECT Review - Kaushikkipathshala <span className="text-accent">VIDEO</span>
         </h2>
       </div>
 
@@ -78,7 +78,7 @@ export function VideoSection() {
         className="relative w-full max-w-4xl pr-6 md:pr-12 aspect-video bg-card border border-border/50 flex items-center justify-center"
       >
         <p className="font-mono text-xs uppercase tracking-widest text-muted-foreground">
-          Video placeholder — add your review video embed URL here
+          Video placeholder — video will be added soon
         </p>
       </div>
     </section>

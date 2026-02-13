@@ -15,12 +15,10 @@ export function ColophonSection() {
   const sectionRef = useRef<HTMLElement>(null)
   const headerRef = useRef<HTMLDivElement>(null)
   const gridRef = useRef<HTMLDivElement>(null)
-  const footerRef = useRef<HTMLDivElement>(null)
 
   /**
-   * Scroll animations: header slides in, then the grid columns stagger in, then the
-   * footer (copyright line) fades in. Each ref is used by GSAP to know what to animate
-   * and when (based on scroll position).
+   * Scroll animations: header slides in, then the grid columns stagger in.
+   * Each ref is used by GSAP to know what to animate and when (based on scroll position).
    */
   useEffect(() => {
     if (!sectionRef.current) return
@@ -41,7 +39,7 @@ export function ColophonSection() {
         })
       }
 
-      /* Grid columns (Team, Reviewers, Special Thanks) fade up with a small stagger. */
+      /* Grid columns (Team) fade up with a small stagger. */
       if (gridRef.current) {
         const columns = gridRef.current.querySelectorAll(":scope > div")
         gsap.from(columns, {
@@ -53,21 +51,6 @@ export function ColophonSection() {
           scrollTrigger: {
             trigger: gridRef.current,
             start: "top 85%",
-            toggleActions: "play none none reverse",
-          },
-        })
-      }
-
-      /* Footer (copyright line) fades in last. */
-      if (footerRef.current) {
-        gsap.from(footerRef.current, {
-          y: 20,
-          opacity: 0,
-          duration: 0.8,
-          ease: "power3.out",
-          scrollTrigger: {
-            trigger: footerRef.current,
-            start: "top 95%",
             toggleActions: "play none none reverse",
           },
         })
@@ -89,54 +72,38 @@ export function ColophonSection() {
         <h2 className="mt-4 font-[var(--font-bebas)] text-5xl md:text-7xl tracking-tight">CREDITS</h2>
       </div>
 
-      {/* Multi-column layout — Team, Reviewers, Special Thanks. Add more columns or list items as needed. */}
+      {/* Multi-column layout — Team only. */}
       <div ref={gridRef} className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-8 md:gap-12">
         {/* Team — replace "joe doe" with your team member names. */}
         <div className="col-span-1">
           <h4 className="font-mono text-[9px] uppercase tracking-[0.3em] text-muted-foreground mb-4">Team</h4>
           <ul className="space-y-2">
-            <li className="font-mono text-xs text-foreground/80">joe doe</li>
-          </ul>
-        </div>
-
-        {/* Reviewers (in video) — people who gave feedback in your review video. */}
-        <div className="col-span-1">
-          <h4 className="font-mono text-[9px] uppercase tracking-[0.3em] text-muted-foreground mb-4">Reviewers (in video)</h4>
-          <ul className="space-y-2">
-            <li className="font-mono text-xs text-foreground/80">joe doe</li>
-          </ul>
-        </div>
-
-        {/* Special Thanks — mentors, professors, facilitators. */}
-        <div className="col-span-1">
-          <h4 className="font-mono text-[9px] uppercase tracking-[0.3em] text-muted-foreground mb-4">SPECIAL THANKS TO</h4>
-          <ul className="space-y-2">
-            <li className="font-mono text-xs text-foreground/80">Professor X</li>
-            <li className="font-mono text-[8px] uppercase tracking-[0.2em] text-muted-foreground/60 mt-2">meet a professor for ideation (mandatory)</li>
+            <li>
+              <a 
+                href="https://www.linkedin.com/in/s-kaushik-rao-33336a289/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="font-mono text-xs text-foreground hover:text-accent transition-colors duration-200"
+              >
+                S Kaushik Rao
+              </a>
+            </li>
           </ul>
         </div>
       </div>
 
-      {/* Bottom copyright — change the text to your team name and tagline. */}
-      <div
-        ref={footerRef}
-        className="mt-24 pt-8 border-t border-border/20 flex flex-col md:flex-row md:items-center md:justify-between gap-4"
-      >
-        <p className="font-mono text-[10px] text-muted-foreground uppercase tracking-widest">
-          FANTASTIC 4 KICKOFF
-        </p>
-        <p className="font-mono text-[10px] text-muted-foreground">lets BUILDIT</p>
-      </div>
-
-      {/* Feedback Form — replace the href with your actual form link and the label with something like "Give feedback". */}
-      <div className="mt-12 text-center">
+      {/* Prominent LinkedIn Button */}
+      <div className="mt-24 text-center">
         <a
-          href="https://forms.gle/aiyJBKZ4ZMV4EJqS8"
+          href="https://www.linkedin.com/in/s-kaushik-rao-33336a289/"
           target="_blank"
           rel="noopener noreferrer"
-          className="inline-block font-mono text-sm text-foreground hover:text-accent transition-colors duration-200 border border-border/40 px-6 py-3 hover:border-accent"
+          className="inline-flex items-center gap-3 font-mono text-sm text-foreground bg-accent/20 hover:bg-accent/30 border border-accent hover:border-accent/80 px-8 py-4 rounded-lg transition-all duration-200 hover:scale-105 shadow-lg hover:shadow-xl"
         >
-          add a form in this button.
+          <span className="uppercase tracking-widest">Connect on LinkedIn</span>
+          <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
+            <path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/>
+          </svg>
         </a>
       </div>
     </section>

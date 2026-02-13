@@ -15,33 +15,33 @@ gsap.registerPlugin(ScrollTrigger)
 const signals = [
   {
     date: "",
-    title: "Learning Without Doing",
-    note: "Students watch hours of tutorials but freeze the moment they have to build something on their own.",
+    title: "Limited Access to Laboratory Infrastructure",
+    note: "Students in rural areas often have no access to proper chemistry labs, surgical training facilities, or expensive astronomy equipment, limiting hands-on learning opportunities.",
   },
   {
     date: "",
-    title: "Tutorial Hell Is the New Degree",
-    note: "Most learners collect courses instead of skills, mistaking progress for productivity.",
+    title: "High Cost of Physical Educational Resources",
+    note: "Medical models, lab equipment, and planetarium tools are expensive, making quality experiential learning inaccessible for underfunded schools and institutions.",
   },
   {
     date: "",
-    title: "Resumes Lie, Code Doesn't",
-    note: "Anyone can write \"proficient in X,\" but very few can actually prove it.",
+    title: "Safety Risks in Real Laboratories",
+    note: "Chemical experiments and surgical simulations involve hazards; a virtual environment eliminates risks while preserving experiential learning.",
   },
   {
     date: "",
-    title: "Mentorship Is Either Missing or Useless",
-    note: "Students either get no guidance or get spoon-fed without real learning.",
+    title: "Lack of Interactive Learning in Traditional Education",
+    note: "Most classrooms rely on static textbooks and 2D diagrams, which reduce engagement and conceptual understanding of complex 3D systems like anatomy or planetary motion.",
   },
   {
     date: "",
-    title: "Hiring Is a Guessing Game",
-    note: "Companies are forced to trust resumes and interviews instead of real work.",
+    title: "Inequality in STEM Education Exposure",
+    note: "Students without access to advanced labs or cadaver-based medical training fall behind peers in urban or well-funded institutions.",
   },
   {
     date: "",
-    title: "Talent Exists, Direction Doesn't",
-    note: "Capable students and graduates have skills—but no clear path to apply or showcase them.",
+    title: "Touch-Based Interfaces Are Limiting in Immersive Learning",
+    note: "Traditional mouse/keyboard or touchscreen interaction reduces immersion; gesture-based control enables more natural, intuitive exploration of 3D educational environments.",
   },
 ]
 
